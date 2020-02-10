@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { Route, Link, Switch } from "react-router-dom";
 import ReactAudioPlayer from "react-audio-player";
 import "./AllAudio.css";
 
 const AllAudio = props => {
-  console.log("this is props", props);
-
   const allAudio = props.data.map((d, i) => (
     <>
       <div key={i} className="card">
         <div className="container">
-          <h3>{d.label}</h3>
+          <Link to={`/details/${d.id}`}>{d.label}</Link>
           <ReactAudioPlayer controls src={d.url} />
         </div>
       </div>

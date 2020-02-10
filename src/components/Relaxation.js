@@ -1,5 +1,6 @@
 import React from "react";
 import ReactAudioPlayer from "react-audio-player";
+import { Link } from "react-router-dom";
 
 const Relaxation = props => {
   const filteredData = props.data.filter(data => {
@@ -9,7 +10,7 @@ const Relaxation = props => {
     <>
       <div key={i} className="card">
         <div className="container">
-          <h3>{d.label}</h3>
+          <Link to={`/details/${d.id}`}>{d.label}</Link>
           <ReactAudioPlayer controls src={d.url} />
         </div>
       </div>

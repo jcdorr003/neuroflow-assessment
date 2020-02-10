@@ -6,6 +6,7 @@ import Meditation from "./Meditation";
 import Breathing from "./Breathing";
 import Relaxation from "./Relaxation";
 import "./Main.css";
+import AudioDescription from "./AudioDescription.js";
 
 const Main = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,10 @@ const Main = () => {
         <Route path="/breathing" render={() => <Breathing data={data} />} />
         <Route path="/relaxation" render={() => <Relaxation data={data} />} />
         <Route path="/all" render={() => <AllAudio data={data} />} />
+        <Route
+          path="/details/:id"
+          render={props => <AudioDescription {...props} data={data} />}
+        />
       </Switch>
     </div>
   );

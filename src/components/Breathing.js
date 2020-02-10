@@ -1,6 +1,7 @@
 import React from "react";
 import "./Breathing.css";
 import ReactAudioPlayer from "react-audio-player";
+import { Link } from "react-router-dom";
 
 const Breathing = props => {
   const filteredData = props.data.filter(data => {
@@ -10,7 +11,7 @@ const Breathing = props => {
     <>
       <div key={i} className="card">
         <div className="container">
-          <h3>{d.label}</h3>
+          <Link to={`/details/${d.id}`}>{d.label}</Link>
           <ReactAudioPlayer controls src={d.url} />
         </div>
       </div>
