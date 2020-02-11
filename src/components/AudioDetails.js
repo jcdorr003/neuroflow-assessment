@@ -3,8 +3,6 @@ import ReactAudioPlayer from "react-audio-player";
 import styles from "./AudioDetails.css";
 
 const AudioDetails = props => {
-  console.log("this is params", props.match.params.id);
-
   console.log("this is props", props);
 
   let audioId = props.match.params.id;
