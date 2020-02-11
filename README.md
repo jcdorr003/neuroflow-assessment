@@ -1,6 +1,8 @@
-# empty-project
+# NeuroFlow Assessment
 
-Empty project.
+- Created "cards" that are categorized with the ability to play audio from that card
+- User can click on card title to be taken to the details page for that specifc audio
+- Audio controls are greyed out if there is an error with the audio file
 
 ## Building and running on localhost
 

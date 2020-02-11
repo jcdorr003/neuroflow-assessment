@@ -1,13 +1,15 @@
-.categories {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 15vh;
+  text-align: center;
+  height: 10vh;
   width: 50%;
 }
 
-a {
+.wrapper a {
   text-decoration: none;
-  color: black;
+  color: #27496d;
   font-size: larger;
+  font-weight: bolder;
 }

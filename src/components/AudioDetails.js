@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactAudioPlayer from "react-audio-player";
+import styles from "./AudioDetails.css";
 
-const AudioDescription = props => {
+const AudioDetails = props => {
   console.log("this is params", props.match.params.id);
 
   console.log("this is props", props);
@@ -18,14 +19,18 @@ const AudioDescription = props => {
     return (
       <>
         <h1>{d.label}</h1>
-        <h3>{d.speaker}</h3>
-        <ReactAudioPlayer src={d.url} controls />
-        <p>{d.description}</p>
+        <h3>Speaker: {d.speaker}</h3>
+        <ReactAudioPlayer
+          className={styles.ReactAudioPlayer}
+          src={d.url}
+          controls
+        />
+        <p> {d.description}</p>
       </>
     );
   });
 
-  return <div>{singleAudio}</div>;
+  return <div className={styles.wrapper}>{singleAudio}</div>;
 };
 
-export default AudioDescription;
+export default AudioDetails;

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Categories.css";
+import styles from "./Categories.css";
 
 const Categories = () => {
   return (
-    <div className="categories">
+    <div className={styles.wrapper}>
       <Link to="/meditation">Meditation</Link>
       <Link to="/breathing">Breathing</Link>
       <Link to="/relaxation">Relaxation</Link>

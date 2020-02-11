@@ -1,1 +1,13 @@
-
+.wrapper {
+  width: 100;
+  overflow-y: auto;
+  height: 90vh;
+  padding: 50px 100px 100px 100px;
+}
+.wrapper a {
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: #00a8cc;
+  font-size: larger;
+  font-weight: bolder;
+}
